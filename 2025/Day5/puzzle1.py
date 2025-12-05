@@ -5,7 +5,7 @@ s = set()
 
 for c in a:
     for d in b:
-        if int(c[0]) <= int(d) <= int(c[1]):
+        if c[0] <= d <= c[1]:
             s.add(d)
 
 
