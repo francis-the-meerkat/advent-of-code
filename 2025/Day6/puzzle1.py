@@ -7,8 +7,8 @@ for b in a:
     for c in b[:-1]:
         if b[-1] == "+": x += int(c)
         elif b[-1] == "*":
-            if x == 0: x = int(c)
-            else: x *= int(c)
+            if x: x *= int(c)
+            else: x = int(c)
     p += x
 
 print(p)

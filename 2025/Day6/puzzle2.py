@@ -1,5 +1,5 @@
 a = open("puzzle1.txt").read().splitlines()
-a = list(zip(*[l.ljust(max(map(len, a))) for l in a]))
+a = list(zip(*[b for b in a]))
 m=p=r = 0
 
 for b in a:
@@ -12,9 +12,9 @@ for b in a:
     n = "".join(c for c in s if c.isdigit())
     if n:
         n = int(n)
-        if m == 0:
-            r += n
+        if m:
+            r = n if not r else r * n
         else:
-            r = n if r == 0 else r * n
+            r += n
 
 p += r; print(p)
